@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script crossorigin src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        #code {
+            display: inline-block;
+            margin: auto;
+            width: 20%;
+            border: 3px solid;
+            padding: 10px;
+            text-align: center;
+            flex-direction: row;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/jsx" defer>
+    const rootElement = document.getElementById('root');
+    const root = ReactDOM.createRoot(rootElement)
+
+    function Card() {
+        return (
+
+            <div id="code">
+                <h1>První stránka v Reactu! 👋</h1>
+                <img src="https://placekitten.com/g/200/300" alt="Kočička"/>
+                <br/>
+                Kocka Cislo 0
+                <br/>
+                <button id="button">Button</button>
+            </div>);
+    }
+
+    function Menu() {
+        return (<>
+                <Card/>
+                <Card/>
+                <Card/>
+            </>
+        )
+    }
+
+    root.render(<Menu/>)
+
+
+</script>
+</body>
+</html>
